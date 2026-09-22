@@ -1,6 +1,6 @@
 # 📑 Índice de Requisitos Não-Funcionais (RNF)
 
-Esta pasta contém os requisitos não-funcionais gerais do sistema SAMU, que impactam todas as funcionalidades.
+Esta pasta contém os requisitos não-funcionais gerais do sistema ARGUS, que impactam todas as funcionalidades.
 
 | Código      | Requisito | Descrição |
 |-------------|-----------|-----------|
