@@ -1,10 +1,10 @@
-##  Sistema SAMU - Versão 1.0
+##  Sistema ARGUS PMBA - Versão 1.0
 
 ### Documento de Visão
 
 ### **Descrição geral deste documento:**
 
-Este documento descreve o cliente (bem como a problemática a ser automatizada com o sistema), os usuários do sistema, e também fornece uma visão geral do Sistema SAMU em sua versão 1.0.
+Este documento descreve o cliente (bem como a problemática a ser automatizada com o sistema), os usuários do sistema, e também fornece uma visão geral do Sistema ARGUS em sua versão 1.0.
 
 ### **1.1 Cliente:** 
 
@@ -38,7 +38,7 @@ Para esta primeira versão do sistema, os grupos/perfis de usuários serão:
   
 ### **1.3 Visão geral do Sistema SAMU - versão 1.0:**
 
- A versão 1.0 do Sistema do SAMU tem como principal objetivo a automatização de parte dos processos conhecidos como Receber Chamado e Realizar Regulação.
+A versão 1.0 do Sistema ARGUS PMBA tem como principal objetivo a automatização do processo de consolidação e visualização geográfica das estatísticas de ocorrências atendidas pelo 17º Batalhão, hoje realizado manualmente pelo Setor de Planejamento Operacional.
  
  #### Fluxo do Sistema SAMU em sua primeira versão: 
 
