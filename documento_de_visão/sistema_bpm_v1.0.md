@@ -8,39 +8,38 @@ Este documento descreve o cliente (bem como a problemática a ser automatizada c
 
 ### **1.1 Cliente:** 
 
-O Serviço de Atendimento Móvel de Urgência (SAMU) do município de Guanambi-Bahia foi criado com o objetivo de fornecer um atendimento rápido e eficaz a situações de urgência e emergência em saúde.
-O serviço de atendimento pré-hospitalar móvel é acionado pelo número telefônico gratuito 192, onde o usuário solicita assistência médica. Esse serviço é composto por dois componentes principais: a Central Médica de Regulação e as equipes assistenciais das ambulâncias.
+O 17º Batalhão da Polícia Militar da Bahia (17º BPM), unidade integrante da Polícia Militar da Bahia (PMBA), atua no atendimento e acompanhamento de ocorrências policiais em sua área de responsabilidade. No contexto deste projeto, destaca-se a atuação do setor de planejamento operacional, que utiliza informações referentes às ocorrências para acompanhar os registros e produzir estatísticas que auxiliam nas atividades de planejamento do batalhão.
 
-Atualmente, os registros dos chamados e dos atendimentos da central de regulação médica do SAMU são feitos manualmente em formulários de papel, resultando na produção de dois documentos diferentes: um formulário que é preenchido no momento do chamado telefônico na central de regulação (formulário este chamado de Ficha Individual de Regulação Médica - Registro de Chamadas), e o outro que é preenchido pelos agentes socorristas durante o atendimento da ocorrência (formulário este chamado de Ficha de Atendimento Pré-hospitalar).
+Atualmente, o registro das ocorrências realizadas durante o serviço policial é efetuado pelos próprios policiais militares por meio do Sistema de Gestão de Segurança Pública (SIGESPOL), uma aplicação online utilizada para o lançamento das ocorrências. Após o registro, as informações ficam disponíveis para os usuários que possuem acesso ao sistema, permitindo que sejam consultadas posteriormente pelo setor de planejamento.
 
-De modo geral, o atendimento começa com um processo conhecido como Receber Chamado, no qual o SAMU recebe um chamado através do número 192, chamado este que é atendido pelo Técnico Auxiliar de Regulação Médica (TARM). O TARM é responsável por coletar as informações iniciais da ocorrência e adicionar manualmente na Ficha Individual de Regulação Médica, por exemplo, a hora do chamado, o nome do solicitante, o local da ocorrência, a quantidade de vítimas, a queixa principal, entre outras informações relevantes. O TARM então encaminha a ligação para o Médico Regulador, bem como passa para ele a Ficha Individual de Regulação Médica, com algumas informações já preenchidas, dando início a um novo processo conhecido como Realizar Regulação. O Médico Regulador dá prosseguimento na coleta de mais informações e complementa o preenchimento da Ficha Individual de Regulação Médica.
+No setor de planejamento, as ocorrências registradas são consultadas periodicamente para o acompanhamento dos eventos ocorridos na área de atuação do batalhão. A partir dessas informações, um policial responsável realiza o levantamento e a organização dos dados para a produção das estatísticas do batalhão, utilizando também planilhas para registrar e consolidar as ocorrências.
 
-De posse de todas as informações coletadas, o Médico Regulador realiza a avaliação da gravidade do caso e, com base nessa análise, determina o recurso mais apropriado a ser destinado ao local da ocorrência (seja uma unidade de suporte básico ou avançado) ou, quando pertinente, presta orientações médicas à distância. Além disso, acompanha a evolução do atendimento e define a unidade de saúde mais adequada para o encaminhamento do paciente, assegurando a continuidade e a eficácia da assistência.
+As informações utilizadas nesse processo são organizadas de acordo com diferentes categorias de ocorrências e de produtividade policial. Entre os registros considerados estão apreensão de armas brancas, apreensão de armas de fogo, apreensão de drogas, apreensão de menores, autos de resistência lavrados, encaminhamento de pessoas à Delegacia de Polícia, mandados de prisão cumpridos, pessoas presas em flagrante, termos circunstanciados lavrados, veículos notificados, apreendidos ou recuperados, além de ocorrências relacionadas a crimes contra instituições financeiras e outros tipos de ocorrências, como homicídio, tentativa de homicídio, furto, roubo, extorsão e ocorrências envolvendo a Lei Maria da Penha.
 
-Nos casos em que o Médico Regulador define que o atendimento de fato é de urgência, e que é necessário o uso de uma unidade de suporte, o Rádio Operador faz a liberação da unidade móvel, que pode ser destinada à equipe de socorristas local ou de outro município. Quando a ocorrência é destinada à equipe de socorristas local, o Rádio Operador entrega a Ficha Individual de Regulação Médica impressa da ocorrência diretamente à equipe que irá deslocar para o atendimento.
+Nesse contexto, o ARGUS será proposto como uma ferramenta para apoiar a organização, consulta e visualização dessas informações. O sistema deverá possibilitar a representação das ocorrências associadas às diferentes regiões da área de atuação do batalhão, permitindo consultar os registros por meio de um mapa e visualizar informações estatísticas relacionadas às ocorrências.
 
-<!--[DÚVIDA] A Ficha Individual de Regulação Médica que o Rádio Operador entrega a equipe da unidade móvel é a mesma que o Médico Regulador preencheu? 
-Fiquei com dúvida pois, quando a ocorrência é continuada, a equipe socorrista liga novamente para o Médico Regular passando informações que ao meu ver são registradas na Ficha Individual de Regulação Médica, então neste caso a ficha que o Rádio Operador entregou é uma cópia da ficha original que está com o Médico Regulador? -->
+Dessa forma, o ARGUS busca contribuir para a centralização e a visualização das informações utilizadas pelo setor de planejamento operacional, facilitando a consulta aos registros e o acompanhamento da distribuição das ocorrências nas diferentes regiões atendidas pelo 17º BPM.
+
 
 ### **1.2 Grupos de usuários do sistema:** 
 
 Para esta primeira versão do sistema, os grupos/perfis de usuários serão:
-- Técnico Auxiliar de Regulação Médica (TARM)
-- Médico Regulador
-- Rádio Operador
-- Equipe Assistencial
+- Setor de planejamento operacional
+- Demais policiais
   
 **Observações:**
   
  - Os grupos/perfis de usuários, serão cadastrados no sistema como Colaboradores.
 
- - As funcionalidades de cada grupo/perfil de usuário, passará pela concessão de permissão (ou seja, se poderá adicionar, editar, excluir, visualizar ou detalhar) para cada setor.
-  
-### **1.3 Visão geral do Sistema SAMU - versão 1.0:**
+ - As funcionalidades disponíveis para cada grupo/perfil de usuário serão definidas por meio da concessão de permissões, determinando se o usuário poderá adicionar, editar, excluir, visualizar ou detalhar informações.
 
-A versão 1.0 do Sistema ARGUS PMBA tem como principal objetivo a automatização do processo de consolidação e visualização geográfica das estatísticas de ocorrências atendidas pelo 17º Batalhão, hoje realizado manualmente pelo Setor de Planejamento Operacional.
+ - O Setor de Planejamento será responsável pelo lançamento e edição das informações das ocorrências, enquanto os demais policiais terão acesso apenas à visualização dos dados.
+  
+### **1.3 Visão geral do Sistema ARGUS - versão 1.0:**
+
+A versão 1.0 do Sistema ARGUS PMBA tem como principal objetivo apoiar a organização, consolidação e visualização geográfica das estatísticas de ocorrências atendidas pelo 17º Batalhão, atualmente produzidas pelo Setor de Planejamento Operacional.
  
- #### Fluxo do Sistema SAMU em sua primeira versão: 
+ #### Fluxo do Sistema ARGUS em sua primeira versão: 
 
 O TARM, o Médico Regulador, o Rádio Operador e a Equipe Assistencial, realizam login no sistema, acessando seus respectivos perfis.
 
