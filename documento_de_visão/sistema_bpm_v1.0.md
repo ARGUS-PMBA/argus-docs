@@ -41,19 +41,23 @@ A versão 1.0 do Sistema ARGUS PMBA tem como principal objetivo apoiar a organiz
  
  #### Fluxo do Sistema ARGUS em sua primeira versão: 
 
-O TARM, o Médico Regulador, o Rádio Operador e a Equipe Assistencial, realizam login no sistema, acessando seus respectivos perfis.
+O Setor de Planejamento Operacional realiza login no sistema, acessando seu perfil com permissão de cadastro e edição.
 
-Ao receber um chamado pelo 192, o TARM atende a ligação e preenche, via sistema, as informações da ocorrência, como a hora do chamado, o nome do solicitante, o local da ocorrência, a quantidade de vítimas, a queixa principal, entre outras informações relevantes. Ao finalizar o preenchimento das informações sob sua responsabilidade, o TARM encaminha a ligação para o Médico Regulador e, via sistema, ele também encaminha o fluxo para a etapa de Regulação. 
+Com base nos boletins de ocorrência já lançados no sistema da PMBA, o Setor de Planejamento cadastra, via sistema, as informações da ocorrência, como o tipo (criminal ou não criminal), o bairro, a data, o horário e a companhia responsável pelo atendimento. Após o cadastro, a ocorrência fica disponível automaticamente para consulta pelos demais usuários do sistema.
 
-O Médico Regulador pode então conferir as informações de todos os chamados em sua tela, podendo escolher o chamado que preferir para dar andamento. O Médico Regulador consegue observar as informações já preenchidas pelo TARM e realizar as atualizações necessárias com base nas informações passadas a ele via telefone. O Médico Regulador realiza a avaliação da gravidade do caso e, com base nessa análise, determina o recurso mais apropriado selecionando, via sistema, a quantidade e tipo de unidade móvel que deseja liberar para o atendimento. O Médico Regulador encaminha a ligação para o Rádio Operador e via sistema ele também encaminha o fluxo para a etapa de Rádio. 
+Os policiais e demais servidores do batalhão, com perfil de visualização, acessam o sistema e podem consultar o mapa interativo, que exibe os bairros com indicadores visuais (cores e números) proporcionais à quantidade de ocorrências registradas. É possível aplicar filtros por tipo de ocorrência, bairro, horário e período (mensal, semestral ou anual), além de comparar a evolução das ocorrências entre diferentes intervalos de tempo. Ao selecionar um bairro no mapa, o usuário visualiza uma tela detalhada com as informações consolidadas daquela região.
 
-O Rádio Operador observa a solicitação designada pelo Médico Regulador podendo gerar a Ficha Individual de Regulação Médica, que apresentará um preenchimento automático de todas as informações descritas pelo TARM e pelo Médico Regulador. O sistema também permite gerar a Ficha de Atendimento Pré-hospitalar. O Rádio Operador poderá então liberar a saída da unidade móvel designada para a ocorrência.
+O sistema também identifica automaticamente os bairros com maior aumento no número de ocorrências em um determinado período, auxiliando o Setor de Planejamento na definição de prioridades para o reforço do policiamento. A partir dessas informações, o Setor de Planejamento pode gerar relatórios (em PDF ou planilha) consolidando os dados para uso em reuniões internas, prestação de contas ou divulgação institucional.
 
-A equipe assistencial recebe o chamado, podendo observar algumas informações no próprio sistema e também gerar o arquivo pdf da Ficha de Atendimento Pré-hospitalar. 
+Todas as ações de cadastro e edição realizadas no sistema ficam registradas em um log de auditoria, identificando o usuário responsável e o momento da alteração, garantindo a rastreabilidade das informações.
+
+> "Ficou faltando alguma coisa que o senhor mencionou nas entrevistas e não vê aqui?"
+> "Tem algo aqui que ficou diferente do que o senhor imaginava?"
+> "O jeito que o sistema foi descrito faz sentido pro dia a dia do batalhão?"
 
  #### **Observações:**
  > [!IMPORTANT]
->  **Observação 1:** Para que todo o fluxo de Receber Chamado e Realizar Regulação, descrito acima, ocorra, faz-se necessário o prévio cadastro das Bases de atendimento, dos Setores, dos Colaboradores, das Unidades (ou seja, da frota de ambulâncias e demais veículos), e por fim, das configurações de permissões para cada Colaborador em seus respectivos Setores.
+>  **Observação 1:** Para que todo o fluxo descrito acima ocorra, faz-se necessário o prévio cadastro dos Bairros, das Companhias, dos Colaboradores (usuários do Setor de Planejamento) e dos Tipos de Ocorrência, bem como as configurações de permissões para cada perfil de usuário do sistema.
 
 > [!NOTE]
->  **Observação 2:** Nesta primeira versão, grande parte dos procedimentos são realizados pelo sistema, porém, ainda será necessária a impressão dos formulários para preenchimento manual complementar. A vantagem operacional do uso desta primeira versão é que boa parte dos dados serão preenchidos pelo TARM e pelo Médico Regulador por meio do sistema, sendo possível gerar os formulários parcialmente preenchidos. O preenchimento do formulário via sistema possibilita também a correção de erros de digitação de maneira mais prática, se comparado à versão impressa do formulário, evitando rasuras ou até mesmo a elaboração de uma nova ficha manualmente.
+>  **Observação 2:** Nesta primeira versão, o sistema não realiza integração automática com o sistema já utilizado pela PMBA, sendo o cadastro das ocorrências realizado manualmente pelo Setor de Planejamento com base nos boletins de ocorrência já lançados naquele sistema. A vantagem operacional do uso desta primeira versão é a centralização e a visualização geográfica dos dados, que hoje são apurados manualmente sem apoio de uma ferramenta visual, possibilitando também maior agilidade na geração de relatórios e na identificação de bairros com maior aumento de ocorrências, se comparado ao processo atual.
