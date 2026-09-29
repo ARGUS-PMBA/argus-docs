@@ -1,4 +1,6 @@
-##  Sistema ARGUS PMBA - Versão 1.0
+##  Sistema ARGUS PMBA - Versão 1.0]
+
+<!-- ARGUS = Análise e Registro Geográfico de Urbanidade e Segurança -->
 
 ### Documento de Visão
 
@@ -50,10 +52,6 @@ Os policiais e demais servidores do batalhão, com perfil de visualização, ace
 O sistema também identifica automaticamente os bairros com maior aumento no número de ocorrências em um determinado período, auxiliando o Setor de Planejamento na definição de prioridades para o reforço do policiamento. A partir dessas informações, o Setor de Planejamento pode gerar relatórios (em PDF ou planilha) consolidando os dados para uso em reuniões internas, prestação de contas ou divulgação institucional.
 
 Todas as ações de cadastro e edição realizadas no sistema ficam registradas em um log de auditoria, identificando o usuário responsável e o momento da alteração, garantindo a rastreabilidade das informações.
-
-> "Ficou faltando alguma coisa que o senhor mencionou nas entrevistas e não vê aqui?"
-> "Tem algo aqui que ficou diferente do que o senhor imaginava?"
-> "O jeito que o sistema foi descrito faz sentido pro dia a dia do batalhão?"
 
  #### **Observações:**
  > [!IMPORTANT]
