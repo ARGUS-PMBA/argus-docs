@@ -1,4 +1,4 @@
-##  Sistema ARGUS PMBA - Versão 1.0]
+##  Sistema ARGUS PMBA - Versão 1.0
 
 <!-- ARGUS = Análise e Registro Geográfico de Urbanidade e Segurança -->
 
