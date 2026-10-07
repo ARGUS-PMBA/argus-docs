@@ -1,4 +1,4 @@
-# Índice de Requisitos — Relatórios (RF)
+# Índice de Requisitos | Relatórios (RF)
 
 Esta pasta contém os requisitos funcionais do sistema ARGUS para o módulo de relatórios.
 

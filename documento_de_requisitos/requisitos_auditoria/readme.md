@@ -1,4 +1,4 @@
-# Índice de Requisitos — Auditoria (RF)
+# Índice de Requisitos | Auditoria (RF)
 
 Esta pasta contém os requisitos funcionais do sistema ARGUS para o módulo de auditoria.
 
