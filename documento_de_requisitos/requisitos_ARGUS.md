@@ -1,15 +1,13 @@
-# Documento de Requisitos — ARGUS PMBA
-
-Documento consolidado com os requisitos organizados por módulo.
+# Documento de Requisitos — ARGUS
 
 ## Sumário
 
-- [Módulo de Pessoas](#modulo-de-pessoas)
-- [Módulo de Ocorrências](#modulo-de-ocorrências)
-- [Módulo de Mapa](#modulo-de-mapa)
-- [Módulo de Relatórios](#modulo-de-relatorios)
-- [Módulo de Auditoria](#modulo-de-auditoria)
-- [Requisitos Não Funcionais](#requisitos-nao-funcionais)
+- [Requisitos de Pessoas](./documento_de_requisitos/requisitos_pessoa/README.md)
+- [Requisitos de Ocorrências](./documento_de_requisitos/requisitos_ocorrencia/README.md)
+- [Requisitos de Mapa](./documento_de_requisitos/requisitos_mapa/README.md)
+- [Requisitos de Relatórios](./documento_de_requisitos/requisitos_relatorios/README.md)
+- [Requisitos de Auditoria](./documento_de_requisitos/requisitos_auditoria/README.md)
+- [Requisitos Não Funcionais](./documento_de_requisitos/rnf/README.md)
 
 ---
 
