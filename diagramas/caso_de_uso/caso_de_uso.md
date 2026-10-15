@@ -11,7 +11,7 @@ Este diagrama representa as interações entre os usuários do sistema ARGUS PMB
 
 ## Diagrama
 
-![Diagrama de Casos de Uso](./casos-de-uso.png)
+
 
 ## Casos de uso
 
