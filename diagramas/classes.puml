@@ -1,0 +1,134 @@
+
+@startuml diagrama_de_classes_ARGUS
+
+skinparam classAttributeIconSize 0
+hide empty members
+
+    class Usuario {
+        - idUsuario: int
+        - nomeUsuario: String
+        - matricula: String
+        - senha: String
+        - perfil: PerfilUsuario
+        + autenticar(): Boolean
+        + podeGerenciarOcorrencias(): Boolean
+    }
+
+    enum PerfilUsuario {
+        PLANEJAMENTO
+        VISUALIZADOR
+    }
+
+    class Ocorrencia {
+        - idOcorrencia: int
+        - data: Date
+        - horario: Time
+        - dataCadastro: DateTime
+        - ehCriminal: Boolean
+        + validarDados(): Boolean
+    }
+
+    class CategoriaOcorrencia {
+        - idCategoria: int
+        - nome: String
+        - descricao: String
+    }
+
+    note right of CategoriaOcorrencia
+        dúvida: uma ocorrencia pode
+        ter mais de uma categoria?
+    end note
+
+    class Bairro {
+        - idBairro: int
+        - nome: String
+    }
+
+    class Companhia {
+        - idCompanhia: int
+        - nome: String
+    }
+
+    class Subarea {
+        - idSubarea: int
+        - nome: String
+    }
+
+    class Pessoa {
+        - idPessoa: int
+        - sexo: String
+        - idade: int
+    }
+
+    class Envolvimento {
+        - idEnvolvimento: int
+        - papel: PapelEnvolvimento
+    }
+
+    enum PapelEnvolvimento {
+        VITIMA
+        SUSPEITO
+    }
+
+    note right of PapelEnvolvimento
+        ainda nao tem todos os papeis
+        de envolvimento definidos
+    end note
+
+    class LogAuditoria {
+        - idAuditoria: int
+        - acao: String
+        - dataHora: DateTime
+    }
+
+    class AutenticacaoService {
+        + autenticar(matricula: String, senha: String): Boolean
+    }
+
+    class OcorrenciaService {
+        + cadastrar(ocorrencia: Ocorrencia): void
+        + editar(ocorrencia: Ocorrencia): void
+        + excluir(id: int): void
+    }
+
+    class MapaService {
+        + carregarMapa(): void
+        + filtrarOcorrencias(): void
+        + detalharBairro(bairro: Bairro): void
+        + destacarBairrosCriticos(): void
+    }
+
+    class RelatorioService {
+        + gerarRelatorio(): void
+        + gerarComparativo(): void
+    }
+
+    class AuditoriaService {
+        + registrarAcao(usuario: Usuario, acao: String): void
+    }
+
+' Relacionamentos entre as classes de dominio
+
+Usuario "1" -- "0..*" Ocorrencia : cadastra
+Usuario "1" -- "0..*" LogAuditoria : realiza ações
+
+CategoriaOcorrencia "1" -- "0..*" Ocorrencia : classifica
+Bairro "1" -- "0..*" Ocorrencia : localiza
+Companhia "1" -- "0..*" Ocorrencia : responsável
+Subarea "1" -- "0..*" Companhia : agrupa
+
+Pessoa "1" -- "0..*" Envolvimento
+Ocorrencia "1" -- "0..*" Envolvimento
+
+' Dependencias entre servicos e classes de dominio
+
+AutenticacaoService ..> Usuario
+OcorrenciaService ..> Ocorrencia
+OcorrenciaService ..> AuditoriaService
+MapaService ..> Ocorrencia
+MapaService ..> Bairro
+RelatorioService ..> Ocorrencia
+AuditoriaService ..> LogAuditoria
+AuditoriaService ..> Usuario
+
+@enduml
